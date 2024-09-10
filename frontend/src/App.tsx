@@ -1,14 +1,24 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import './styles/styles.css';
 
-interface AppProps {
-  title: string;
-}
-
-const App: React.FC<AppProps> = ({ title }) => {
+const App: React.FC = () => {
   return (
-    <div>
-      <h1>{title}</h1>
-    </div>
+    <>
+      <Header />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Testimonials />
+      <Contact />
+    </>
   );
 };
 

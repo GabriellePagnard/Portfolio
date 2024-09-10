@@ -1,0 +1,47 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #001f3f;
+  color: #fff;
+  padding: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #17a2b8;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about-section, .experience-section, .projects-section, .contact-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.tech-icons img {
+  width: 50px;
+  margin: 10px;
+}
+
+.contact-info {
+  margin: 20px 0;
+}
