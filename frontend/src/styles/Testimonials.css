@@ -1,38 +1,128 @@
+/* Section des témoignages */
 .testimonials-section {
-    background-color: #f8f9fa;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  .testimonials-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .testimonials-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .testimonial {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .testimonial-text {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .testimonial-author {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #333;
-  }
-  
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #c7008c;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* Style des témoignages */
+.testimonial {
+  background-color: #ececec; /* Cadre gris clair */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Flèches de navigation */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent;
+  border: none;
+  color: #40fde7; /* Couleur initiale des flèches */
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  top: 50%; /* Aligné verticalement */
+  transform: translateY(-50%);
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 50%; /* Rend les boutons ronds */
+  border: 2px solid #40fde7; /* Bordure turquoise */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #c7008c !important; /* Couleur rose au survol */
+  border-color: #c7008c !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Effet de halo autour des flèches */
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none;
+  color: #40fde7; /* Rétablit la couleur turquoise après clic */
+  border-color: #40fde7;
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  color: #c7008c !important; /* Couleur rose forcée lors du clic */
+  border-color: #c7008c !important;
+
+}
+
+.carousel-control-prev:hover:active,
+.carousel-control-next:hover:active {
+  color: #c7008c !important; /* Assure que le survol prend le dessus après un clic */
+  border-color: #c7008c !important;
+}
+
+.carousel-control-prev {
+  left: 22rem; /* Ajusté pour rapprocher les flèches à gauche */
+}
+
+.carousel-control-next {
+  right: 22rem; /* Ajusté pour rapprocher les flèches à droite */
+}
+
+/* Points de navigation en dessous du slider */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  background-color: #666;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicators .active {
+  background-color: #c7008c; /* Couleur des points actifs */
+}
+
+/* Transition pour les items du carousel */
+.carousel-item {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}

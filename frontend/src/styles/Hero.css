@@ -15,7 +15,7 @@
 .hero-content {
   z-index: 2;
   position: relative;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .hero::before {
@@ -36,7 +36,7 @@
   position: relative;
   z-index: 2; 
   margin-bottom: 0.5em;
-  margin-top: 9rem; 
+  margin-top: 5rem; 
   color: white;
 }
 
@@ -71,21 +71,13 @@
   color: #40fde7;
   border: 1px solid #710055;
   transform: scale(1.05);
-  animation: vibrate 0.3s ease infinite;
-}
-
-@keyframes vibrate {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-2px); }
-  50% { transform: translateX(2px); }
-  75% { transform: translateX(-2px); }
-  100% { transform: translateX(0); }
+  animation: vibrate 0.5s ease infinite;
 }
 
 /* Styles des icônes sociales */
 .social-icons {
   position: absolute;
-  bottom: 15rem; /* Placement au bas de la section */
+  bottom: 1rem; /* Placement au bas de la section */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -109,7 +101,7 @@
 .social-icon:hover {
   transform: scale(1.2); /* Effet de grossissement au survol */
   color: #c7008c; /* Couleur lors du survol */
-  border: 2px solid #c7008c; /* Bordure */
+  border: 2px solid #40fde7; /* Bordure */
   animation: rotate 0.5s ease-in-out;
 }
 
