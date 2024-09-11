@@ -52,7 +52,7 @@
 
 .header__link .header__resume {
   background-color: #40fde7;
-  color: #ce006e;
+  color: #c7008c;
   border: 1px solid #00414e;
   border-radius: 10px; 
   padding: 0.5rem 1.5rem;
@@ -64,7 +64,7 @@
 
 .header__link .header__resume:hover {
   background-color: #c7008c;
-  color: #24f9f2;
+  color: #40fde7;
   border: 1px solid #710055;
   transform: scale(1.05);
 }

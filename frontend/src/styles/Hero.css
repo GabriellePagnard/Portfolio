@@ -3,13 +3,19 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; 
   color: #fff;
   text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 11rem;
 }
 
 .hero-content {
-  z-index: 2; /* Pour que le texte soit au-dessus de l'overlay */
+  z-index: 2;
+  position: relative;
+  margin-top: 5rem;
 }
 
 .hero::before {
@@ -19,35 +25,97 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Voile noir */
-  backdrop-filter: blur(5px); /* Ajout de flou */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  z-index: 0;
 }
-
-
 
 .hero h1 {
   font-size: 4rem;
   font-weight: bold;
+  position: relative;
+  z-index: 2; 
+  margin-bottom: 0.5em;
+  margin-top: 9rem; 
+  color: white;
 }
 
-.hero .lead {
-  font-size: 1.5rem;
+.hero h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2; 
+  margin-bottom: 7rem;
+  animation: none; 
 }
 
-/* Styles pour les icônes sociales */
+.hero .btn-primary {
+  margin-top: 2rem; 
+  padding: 0.8rem 2rem;
+  background-color: #40fde7;
+  color: #c7008c;
+  border: 1px solid #00414e;
+  border-radius: 10px; 
+  font-weight: bold; 
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.hero .btn-primary:hover {
+  background-color: #c7008c;
+  color: #40fde7;
+  border: 1px solid #710055;
+  transform: scale(1.05);
+  animation: vibrate 0.3s ease infinite;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* Styles des icônes sociales */
 .social-icons {
+  position: absolute;
+  bottom: 15rem; /* Placement au bas de la section */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .social-icon {
-  font-size: 2rem;
-  color: white;
-  transition: transform 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 24px;
+  color: white; /* Couleur des icônes */
+  background: transparent; /* Fond transparent */
+  border: 2px solid white; /* Bordure */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  transform: scale(1.2) rotate(5deg); /* Effet de vibration */
-  color: #0dcaf0; /* Change la couleur au survol */
+  transform: scale(1.2); /* Effet de grossissement au survol */
+  color: #c7008c; /* Couleur lors du survol */
+  border: 2px solid #c7008c; /* Bordure */
+  animation: rotate 0.5s ease-in-out;
+}
+
+/* Alternativement, pour une rotation */
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
