@@ -1,0 +1,11 @@
+.footer {
+    background-color: #343a40; /* Fond sombre */
+    color: #f8f9fa; /* Texte clair */
+    text-align: center;
+  }
+    
+  .footer p {
+    font-size: 15px;
+    margin: 0;
+  }
+  
