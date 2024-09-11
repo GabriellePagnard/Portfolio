@@ -59,7 +59,7 @@ function Header() {
           Accueil
         </a>
         <a href="#about">A propos</a>
-        <a href="#experience">Expériences</a>
+        <a href="#experience">Expériences & Formations</a>
         <a href="#projects">Projets</a>
         <a href="#testimonials">Témoignages</a>
         <a href="#contact">Contact</a>

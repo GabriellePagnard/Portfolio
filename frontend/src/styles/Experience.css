@@ -1,5 +1,130 @@
-.experience-section {
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
+.experience {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #606060;
+}
+
+.experience__title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #c7008c; /* Couleur rose pour les titres */
+  margin-bottom: 2rem;
+}
+
+.experience__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.experience__row::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px; /* Épaisseur de la ligne de séparation augmentée */
+  background-color: #40fde7; /* Ligne de séparation turquoise */
+}
+
+.experience__column {
+  flex: 1;
+  max-width: 48%;
+  padding: 1rem;
+}
+
+.experience__column-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.experience__icon-title {
+  font-size: 2.2rem;
+  color: #c7008c; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.experience__column-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #606060; 
+}
+
+/* Cartes pour chaque sous-section */
+.experience__card {
+  background-color: #fff;
+  border: 1px solid #c7008c; /* Bordure fine rose */
+  border-radius: 10px; /* Bordures arrondies */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.experience__card:hover {
+  transform: scale(1.02); /* Léger zoom au survol */
+}
+
+.experience__content {
+  text-align: left;
+}
+
+.experience__date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem; /* Taille de la date et de l'icône */
+  font-weight: 600;
+  color: #c7008c;
+  margin-bottom: 0.5rem;
+}
+
+.experience__icon {
+  font-size: inherit; /* L'icône aura la même taille que le texte de la date */
+  color: #40fde7; /* Couleur turquoise pour les icônes de date */
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.experience__content-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #606060;
+  margin-bottom: 0.5rem;
+}
+
+.experience__subtitle {
+  font-size: 1rem;
+  color: #40fde7;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.experience__h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #c7008c; /* Couleur rose pour les sous-titres */
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: none;
+  font-size: 1rem;
+}
+
+ul li::before {
+  content: '• ';
+  color: #606060; /* Points gris */
+  font-weight: bold;
+}
