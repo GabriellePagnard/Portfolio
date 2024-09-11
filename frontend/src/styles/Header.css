@@ -1,63 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Utilisation de la police Montserrat */
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #1a1a1a;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .header__left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header__title {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-right: 2rem;
-  }
-  
-  .header__menu {
-    width: 40px;
-    cursor: pointer;
-  }
-  
-  .header__link {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header__link a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 1.5rem;
-  }
-  
-  .header__link .header__resume {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .header__link .header__resume:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Hidden state */
-  .header__hidden {
-    transform: translateY(-100%);
-  }
-  
-  .active {
-    display: block;
-  }
-  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2); 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header__left {
+  line-height: 0;
+}
+
+.header__title {
+  font-size: 2rem; 
+  color: #ffffff;
+  margin-right: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none; 
+  cursor: pointer; 
+}
+
+.header__link {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header__link a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: bold; 
+  text-transform: none;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__link a:hover {
+  color: #24f9f2;
+}
+
+.header__link .header__resume {
+  background-color: #40fde7;
+  color: #ce006e;
+  border: 1px solid #00414e;
+  border-radius: 10px; 
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold; 
+  text-transform: uppercase; 
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.header__link .header__resume:hover {
+  background-color: #c7008c;
+  color: #24f9f2;
+  border: 1px solid #710055;
+  transform: scale(1.05);
+}
+
+.header__hidden {
+  transform: translateY(-100%); 
+}
+
+.active {
+  display: block;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #24f9f2;
+}
+
+.header__logo-link {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 0; /* Pour éviter les espaces en ligne */
+}
+
+.header__logo {
+  display: block;
+  max-height: 50px; /* Ajuste la taille du logo selon tes besoins */
+  margin: 0;
+  padding: 0;
+}

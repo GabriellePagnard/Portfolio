@@ -1,9 +1,53 @@
 .hero {
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
-  .hero-text {
-    font-size: 2rem;
-    text-align: center;
-  }
-  
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  z-index: 2; /* Pour que le texte soit au-dessus de l'overlay */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Voile noir */
+  backdrop-filter: blur(5px); /* Ajout de flou */
+  z-index: 1;
+}
+
+
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.hero .lead {
+  font-size: 1.5rem;
+}
+
+/* Styles pour les icônes sociales */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2) rotate(5deg); /* Effet de vibration */
+  color: #0dcaf0; /* Change la couleur au survol */
+}
