@@ -1,5 +1,100 @@
-.contact-section {
-    padding: 20px;
-    background-color: #fff;
-  }
-  
+.contact {
+  min-height: 80vh;
+  width: 100%;
+  padding: 6rem 6%;
+  background-color: #c7008b10;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #606060;
+}
+
+.contact__cadre {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__title {
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #c7008c;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.contact__title-3 {
+  letter-spacing: 2.5px;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #606060;
+  margin-bottom: 3rem;
+}
+
+.contact__info{
+  letter-spacing: 2.5px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #606060;
+  margin-bottom: 3rem;
+}
+
+.contact__content-info {
+  margin-bottom: 3rem;
+}
+
+.contact__icon {
+  font-size: 2rem;
+  color: #c7008c;
+  margin-bottom: 10px;
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border: 1px solid #c7008c;
+  border-radius: 0.8rem;
+  box-shadow: #BDC3C7 5px 5px 5px;
+  background-color: #c7008b2c;
+}
+
+.contact__form-content-input,
+.contact__form-content-input-message {
+  background-color: #40fde772;
+  border: 1px solid #c7008c;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #606060;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+}
+
+.contact__form-content-input-message {
+  height: 100px;
+  resize: none;
+}
+
+.contact__submit-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #40fde7;
+  color: #c7008c;
+  border: 1px solid #00414e;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact__submit-btn:hover {
+  background-color: #c7008c;
+  color: #40fde7;
+  border: 1px solid #710055;
+  transform: scale(1.05);
+}

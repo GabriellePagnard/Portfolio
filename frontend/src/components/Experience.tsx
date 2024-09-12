@@ -23,7 +23,7 @@ const Experience: React.FC = () => {
             <div className="experience__content">
               <div className="experience__date">
                 <FaCalendarAlt className="experience__icon" />
-                <p>2023 - Présent</p>
+                <p>2023</p>
               </div>
               <h4 className="experience__content-title">
                 Titre Professionnel Développeur Web et Web Mobile (Bac+2)
@@ -68,7 +68,7 @@ const Experience: React.FC = () => {
             <div className="experience__content">
               <div className="experience__date">
                 <FaCalendarAlt className="experience__icon" />
-                <p>2023 - Présent</p>
+                <p>2023</p>
               </div>
               <h4 className="experience__content-title">
                 Développeuse Fullstack JavaScript
