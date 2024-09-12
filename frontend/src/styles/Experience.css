@@ -7,10 +7,12 @@
 }
 
 .experience__title {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: #c7008c; 
-  margin-bottom: 2rem;
+  color: #c7008c;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .experience__row {
@@ -100,6 +102,12 @@
   font-weight: bold;
   color: #606060;
   margin-bottom: 0.5rem;
+}
+
+.content {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #606060;
 }
 
 .experience__subtitle {

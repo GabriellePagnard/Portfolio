@@ -31,11 +31,11 @@ const Experience: React.FC = () => {
               <p className="experience__subtitle">O'Clock</p>
               <h4 className="experience__h4">Compétences acquises :</h4>
               <ul>
-                <li>HTML5, CSS3 (SASS, Tailwind)</li>
-                <li>ReactJs, JavaScript, TypeScript</li>
-                <li>NodeJs, Express, Sequelize</li>
-                <li>PostgreSQL, MongoDB</li>
-                <li>Git/GitHub, Insomnia, DBeaver</li>
+                <li className="content">HTML5, CSS3 (SASS, Tailwind)</li>
+                <li className="content">ReactJs, JavaScript, TypeScript</li>
+                <li className="content">NodeJs, Express, Sequelize</li>
+                <li className="content">PostgreSQL, MongoDB</li>
+                <li className="content">Git/GitHub, Insomnia, DBeaver</li>
               </ul>
             </div>
           </div>
@@ -76,9 +76,9 @@ const Experience: React.FC = () => {
               <p className="experience__subtitle">O'Clock, Paris</p>
               <h4 className="experience__h4">Projet Foodflex :</h4>
               <ul>
-                <li>Rôle : Scrum Master, équipe de 5 personnes</li>
-                <li>Technologies : NodeJs, React, Sequelize, PostgreSQL</li>
-                <li>Accomplissement : Livraison en 4 semaines en méthodologie agile</li>
+                <li className="content">Rôle : Scrum Master, équipe de 5 personnes</li>
+                <li className="content">Technologies : NodeJs, React, Sequelize, PostgreSQL</li>
+                <li className="content">Accomplissement : Livraison en 4 semaines en méthodologie agile</li>
               </ul>
             </div>
           </div>
@@ -94,9 +94,9 @@ const Experience: React.FC = () => {
               <p className="experience__subtitle">Djoomy, Paris</p>
               <h4 className="experience__h4">Compétences :</h4>
               <ul>
-                <li>Stratégie Digitale et Community Management</li>
-                <li>Développement Commercial</li>
-                <li>Création de solutions web sur mesure</li>
+                <li className="content">Stratégie Digitale et Community Management</li>
+                <li className="content">Développement Commercial</li>
+                <li className="content">Création de solutions web sur mesure</li>
               </ul>
             </div>
           </div>
@@ -114,8 +114,8 @@ const Experience: React.FC = () => {
               <p className="experience__subtitle">Freelance, Paris</p>
               <h4 className="experience__h4">Compétences :</h4>
               <ul>
-                <li>Gestion de Projets et Création Artistique</li>
-                <li>Conception de solutions d'aménagement intérieur</li>
+                <li className="content">Gestion de Projets et Création Artistique</li>
+                <li className="content">Conception de solutions d'aménagement intérieur</li>
               </ul>
             </div>
           </div>

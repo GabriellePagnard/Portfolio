@@ -1,4 +1,4 @@
-.hero {
+.home {
   position: relative;
   height: 100vh;
   display: flex;
@@ -18,7 +18,7 @@
   margin-top: 2rem;
 }
 
-.hero::before {
+.home::before {
   content: '';
   position: absolute;
   top: 0;
@@ -30,7 +30,7 @@
   z-index: 0;
 }
 
-.hero h1 {
+.home h1 {
   font-size: 4rem;
   font-weight: bold;
   position: relative;
@@ -40,7 +40,7 @@
   color: white;
 }
 
-.hero h3 {
+.home h3 {
   font-size: 2rem;
   font-weight: 400;
   color: white;
@@ -51,7 +51,7 @@
   animation: none; 
 }
 
-.hero .btn-primary {
+.home .btn-primary {
   margin-top: 2rem; 
   padding: 0.8rem 2rem;
   background-color: #40fde7;
@@ -66,7 +66,7 @@
   z-index: 2;
 }
 
-.hero .btn-primary:hover {
+.home .btn-primary:hover {
   background-color: #c7008c;
   color: #40fde7;
   border: 1px solid #710055;

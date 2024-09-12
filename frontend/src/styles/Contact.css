@@ -1,7 +1,7 @@
 .contact {
   min-height: 80vh;
   width: 100%;
-  padding: 6rem 6%;
+  padding: 60px 0;
   background-color: #c7008b10;
   display: flex;
   justify-content: center;
@@ -17,34 +17,36 @@
 }
 
 .contact__title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #c7008c;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
+  margin-top: 0.5rem;
 }
 
 .contact__title-3 {
-  letter-spacing: 2.5px;
-  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #606060;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem; 
 }
 
-.contact__info{
-  letter-spacing: 2.5px;
+.contact__info {
+  letter-spacing: 1.5px;
   font-size: 1.1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #606060;
-  margin-bottom: 3rem;
+  margin-bottom: 1.6rem;
+  margin-top: 0.5rem;
 }
 
 .contact__content-info {
-  margin-bottom: 3rem;
+  margin-bottom: 1.6rem; /* Réduction de l'espace entre les infos et le formulaire */
 }
 
 .contact__icon {
@@ -67,7 +69,7 @@
 .contact__form-content-input-message {
   background-color: #40fde772;
   border: 1px solid #c7008c;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: 'Montserrat', sans-serif;
   color: #606060;
   margin-bottom: 1.5rem;
@@ -87,7 +89,7 @@
   border: 1px solid #00414e;
   border-radius: 10px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -97,4 +99,8 @@
   color: #40fde7;
   border: 1px solid #710055;
   transform: scale(1.05);
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
 }

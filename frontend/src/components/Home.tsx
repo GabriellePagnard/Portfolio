@@ -3,7 +3,7 @@ import "../styles/Home.css";
 import backgroundImage from "../assets/images/bg.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
-const Hero: React.FC = () => {
+const Home: React.FC = () => {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      className="hero d-flex flex-column justify-content-center align-items-center text-center"
+      className="home d-flex flex-column justify-content-center align-items-center text-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
         color: "#fff",
       }}
     >
-      <div className="hero-text">
+      <div className="home-text">
         <h1>Gabrielle Pagnard</h1>
         <h3 className="typing-effect">{text}</h3>
         <a href="#about" className="btn-primary">
@@ -79,4 +79,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default Home;
