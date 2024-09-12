@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Hero.css";
-import backgroundImage from "../assets/images/bg1.png";
+import "../styles/Home.css";
+import backgroundImage from "../assets/images/bg.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Hero: React.FC = () => {

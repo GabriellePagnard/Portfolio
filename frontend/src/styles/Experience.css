@@ -9,7 +9,7 @@
 .experience__title {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #c7008c; /* Couleur rose pour les titres */
+  color: #c7008c; 
   margin-bottom: 2rem;
 }
 
@@ -28,8 +28,8 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 3px; /* Épaisseur de la ligne de séparation augmentée */
-  background-color: #40fde7; /* Ligne de séparation turquoise */
+  width: 3px; 
+  background-color: #40fde7; 
 }
 
 .experience__column {
@@ -59,19 +59,18 @@
   color: #606060; 
 }
 
-/* Cartes pour chaque sous-section */
 .experience__card {
   background-color: #fff;
-  border: 1px solid #c7008c; /* Bordure fine rose */
-  border-radius: 10px; /* Bordures arrondies */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  border: 1px solid #c7008c; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
   padding: 2rem;
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
 }
 
 .experience__card:hover {
-  transform: scale(1.02); /* Léger zoom au survol */
+  transform: scale(1.02); 
 }
 
 .experience__content {
@@ -82,15 +81,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem; /* Taille de la date et de l'icône */
+  font-size: 1rem; 
   font-weight: 600;
   color: #c7008c;
   margin-bottom: 0.5rem;
 }
 
 .experience__icon {
-  font-size: inherit; /* L'icône aura la même taille que le texte de la date */
-  color: #40fde7; /* Couleur turquoise pour les icônes de date */
+  font-size: inherit; 
+  color: #40fde7; 
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -113,7 +112,7 @@
 .experience__h4 {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #c7008c; /* Couleur rose pour les sous-titres */
+  color: #c7008c; 
   margin-bottom: 0.5rem;
 }
 
@@ -125,6 +124,6 @@ ul {
 
 ul li::before {
   content: '• ';
-  color: #606060; /* Points gris */
+  color: #606060; 
   font-weight: bold;
 }
