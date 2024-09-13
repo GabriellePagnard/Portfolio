@@ -30,7 +30,8 @@ const projectsData = [
     id: 1,
     name: "Apothéose",
     description: "Projet de fin de formation, création d'une application web complète.",
-    fullDescription: "Dans ce projet, j'ai travaillé sur une application web complète en tant que développeuse fullstack. Il inclut l'authentification, un tableau de bord utilisateur, etc.",
+    fullDescription:
+      "Dans ce projet, j'ai travaillé sur une application web complète en tant que développeuse fullstack. Il inclut l'authentification, un tableau de bord utilisateur, etc.",
     date: "2023",
     isEncours: true,
   },
@@ -38,11 +39,29 @@ const projectsData = [
     id: 2,
     name: "Projet 2",
     description: "En cours de développement...",
-    fullDescription: "Détails à venir.",
+    fullDescription:
+      "Détails à venir.",
     date: "À venir",
     isEncours: false,
   },
-  // Ajoutez plus de projets ici...
+  {
+    id: 3,
+    name: "Projet 3",
+    description: "En cours de développement...",
+    fullDescription:
+      "Détails à venir.",
+    date: "À venir",
+    isEncours: false,
+  },
+  {
+    id: 4,
+    name: "Projet 4",
+    description: "En cours de développement...",
+    fullDescription:
+      "Détails à venir.",
+    date: "À venir",
+    isEncours: false,
+  },
 ];
 
 const Projects: React.FC = () => {
@@ -77,11 +96,12 @@ const Projects: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Réinitialisation des paramètres du carousel
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: true, // Défilement infini activé
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 4, // Affichage de 4 projets sur les grands écrans
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -89,13 +109,13 @@ const Projects: React.FC = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, // Affiche 2 projets sur les écrans moyens
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Affiche 1 projet sur les petits écrans
         },
       },
     ],
