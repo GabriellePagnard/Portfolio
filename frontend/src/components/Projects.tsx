@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Projects.css";
-import { FaCalendarAlt, FaChevronLeft, FaChevronRight, FaChevronDown } from "react-icons/fa";
+import { FaCalendarAlt, FaChevronLeft, FaChevronRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,25 +42,41 @@ const projectsData = [
     date: "À venir",
     isEncours: false,
   },
-  {
-    id: 3,
-    name: "Projet 3",
-    description: "En cours de développement...",
-    fullDescription: "Détails à venir.",
-    date: "À venir",
-    isEncours: false,
-  },
-  {
-    id: 4,
-    name: "Projet 4",
-    description: "En cours de développement...",
-    fullDescription: "Détails à venir.",
-    date: "À venir",
-    isEncours: false,
-  },
+  // Ajoutez plus de projets ici...
 ];
 
 const Projects: React.FC = () => {
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById("about"); // Assurez-vous que votre section "À propos" a l'id "about"
+      const scrollPosition = window.scrollY;
+
+      if (aboutSection) {
+        const aboutTop = aboutSection.offsetTop;
+
+        // Si l'utilisateur scrolle sous la section "À propos", afficher la flèche
+        if (scrollPosition >= aboutTop) {
+          setShowArrow(true);
+        } else {
+          setShowArrow(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Nettoyage du gestionnaire d'événements
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -110,6 +126,14 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </Slider>
+
+        {/* Flèche de retour en haut */}
+        <div
+          className={`back-to-top ${showArrow ? "visible" : ""}`}
+          onClick={scrollToTop}
+        >
+          <FaChevronUp />
+        </div>
       </div>
     </section>
   );
