@@ -135,3 +135,134 @@ ul li::before {
   color: #606060; 
   font-weight: bold;
 }
+
+/* -------- Responsive Styles pour Experience ---------- */
+
+/* Petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  .experience {
+    padding: 40px 0; /* Réduire le padding */
+  }
+
+  .experience__title {
+    font-size: 2.2rem; /* Réduire la taille du titre */
+    margin-bottom: 30px; /* Réduire l'espacement sous le titre */
+  }
+
+  .experience__row {
+    flex-direction: column; /* Affichage en une seule colonne */
+    padding: 0 1rem; /* Ajuster le padding */
+  }
+
+  .experience__row::before {
+    display: none; /* Supprimer la ligne verticale */
+  }
+
+  .experience__column {
+    max-width: 100%; /* Utiliser toute la largeur de l'écran */
+    padding: 0; /* Réduire le padding des colonnes */
+    margin-bottom: 2rem; /* Ajouter de l'espacement entre les colonnes */
+  }
+
+  .experience__column-header {
+    justify-content: center; /* Centrer les en-têtes des colonnes */
+  }
+
+  .experience__column-title {
+    font-size: 1.8rem; /* Réduire la taille des titres de colonnes */
+    text-align: center;
+  }
+
+  .experience__icon-title {
+    font-size: 2rem; /* Ajuster la taille de l'icône */
+  }
+
+  .experience__card {
+    padding: 1.5rem; /* Réduire la taille des cartes */
+    margin-bottom: 1.5rem; /* Réduire l'espacement entre les cartes */
+  }
+
+  .experience__content-title {
+    font-size: 1.4rem; /* Réduire la taille des titres des cartes */
+    margin-bottom: 0.5rem;
+  }
+
+  .experience__date {
+    font-size: 0.9rem; /* Réduire la taille de la date */
+  }
+
+  .experience__h4 {
+    font-size: 1.2rem; /* Réduire la taille des sous-titres */
+    margin-bottom: 0.5rem;
+  }
+
+  .content {
+    font-size: 1rem; /* Réduire la taille du texte des listes */
+  }
+
+  .experience__subtitle {
+    font-size: 0.9rem; /* Réduire la taille des sous-titres */
+  }
+
+  ul {
+    padding-left: 15px; /* Réduire l'espacement des listes */
+  }
+}
+
+/* Très petits écrans (max-width: 576px) */
+@media (max-width: 576px) {
+  .experience {
+    padding: 30px 0; /* Réduire encore le padding */
+  }
+
+  .experience__title {
+    font-size: 2rem; /* Réduire davantage la taille du titre */
+    margin-bottom: 20px;
+  }
+
+  .experience__row {
+    padding: 0 1rem;
+  }
+
+  .experience__column {
+    max-width: 100%;
+    margin-bottom: 1.5rem; /* Réduire l'espacement entre les colonnes */
+  }
+
+  .experience__column-title {
+    font-size: 1.6rem; /* Réduire la taille des titres de colonnes */
+  }
+
+  .experience__icon-title {
+    font-size: 1.8rem; /* Réduire encore la taille de l'icône */
+  }
+
+  .experience__card {
+    padding: 1rem; /* Réduire encore la taille des cartes */
+    margin-bottom: 1rem;
+  }
+
+  .experience__content-title {
+    font-size: 1.2rem; /* Réduire la taille des titres des cartes */
+  }
+
+  .experience__date {
+    font-size: 0.8rem; /* Réduire encore la taille de la date */
+  }
+
+  .experience__h4 {
+    font-size: 1rem; /* Réduire la taille des sous-titres */
+  }
+
+  .content {
+    font-size: 0.9rem; /* Réduire encore la taille du texte des listes */
+  }
+
+  .experience__subtitle {
+    font-size: 0.8rem; /* Réduire la taille des sous-titres */
+  }
+
+  ul {
+    padding-left: 10px; /* Réduire encore l'espacement des listes */
+  }
+}

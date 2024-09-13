@@ -189,26 +189,6 @@
   display: none;
 }
 
-/* Responsivité pour les petits écrans */
-@media (max-width: 768px) {
-  .projects__row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .projects__card {
-    margin-bottom: 30px;
-  }
-
-  .custom-prev-arrow {
-    left: -20px;
-  }
-
-  .custom-next-arrow {
-    right: -20px;
-  }
-}
-
 /* Styles pour la flèche de retour en haut */
 .back-to-top {
   position: fixed;
@@ -243,3 +223,147 @@
 .back-to-top:hover {
   background-color: #c7008c;
 }
+
+
+/* -------- Responsive Styles pour Projets ---------- */
+
+/* Petits écrans (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .projects__card {
+    height: 250px;
+    padding: 20px;
+  }
+
+  .projects__expand-icon {
+    top: 88%;
+  }
+
+  .custom-prev-arrow {
+    left: -30px;
+  }
+
+  .custom-next-arrow {
+    right: -30px;
+  }
+
+  .projects__button {
+    margin-top: 2.5rem;
+  }
+
+  .custom-arrow {
+    background-color: rgba(199, 0, 140, 0.2); /* Rendre les flèches transparentes */
+    color: #ffffff; /* Masquer la couleur de la flèche */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .custom-arrow:hover {
+    background-color: rgba(199, 0, 140, 0.2); /* Rendre les flèches transparentes */
+    color: #ffffff; /* Masquer la couleur de la flèche */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+/* Très petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  .projects__container {
+    max-width: 95%;
+  }
+
+  .projects__title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .projects__card {
+    height: 270px;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .projects__expand-icon {
+    top: 90%;
+    font-size: 1.3rem;
+  }
+
+  .projects__button {
+    margin-top: 3rem;
+  }
+
+  .custom-prev-arrow {
+    left: -20px;
+  }
+
+  .custom-next-arrow {
+    right: -20px;
+  }
+
+  .custom-arrow {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  .custom-arrow:hover {
+    color: #c7008c;
+  }
+}
+
+/* Très petits écrans (max-width: 576px) */
+@media (max-width: 576px) {
+  .projects__container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .projects__title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .projects__card {
+    height: 300px;
+    padding: 10px;
+  }
+
+  .projects__expand-icon {
+    top: 92%;
+    font-size: 1.2rem;
+  }
+
+  .projects__button {
+    margin-top: 2rem;
+  }
+
+  .custom-prev-arrow, .custom-next-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    background-color: rgba(199, 0, 140, 0.2); /* Arrière-plan transparent */
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .custom-arrow:hover {
+    background-color: rgba(199, 0, 140, 0.2); /* Rendre les flèches transparentes */
+    color: #ffffff; /* Masquer la couleur de la flèche */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .custom-prev-arrow {
+    left: -15px;
+  }
+
+  .custom-next-arrow {
+    right: -15px;
+  }
+
+  .projects__full-details {
+    font-size: 0.8rem;
+  }
+}
+

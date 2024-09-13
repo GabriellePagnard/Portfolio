@@ -1,11 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../styles/Header.css";
 import logo from "../assets/images/logo_gp.png";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import des icônes pour le menu burger
 
 function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
-  const btnMenuRef = useRef<HTMLButtonElement>(null);
   const navBarRef = useRef<HTMLElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const posHeader = () => {
@@ -31,8 +32,7 @@ function Header() {
   }, []);
 
   const menuOnClick = () => {
-    const navBarElement = navBarRef.current;
-    navBarElement?.classList.toggle("active");
+    setMenuOpen(!menuOpen); // Toggle menu state
   };
 
   const handleDownload = () => {
@@ -54,7 +54,7 @@ function Header() {
           <img src={logo} alt="Logo" className="header__logo" />
         </a>
       </div>
-      <nav ref={navBarRef} className="header__link">
+      <nav ref={navBarRef} className={`header__link ${menuOpen ? "active" : ""}`}>
         <a href="#home" className="header__active">
           Accueil
         </a>
@@ -63,14 +63,15 @@ function Header() {
         <a href="#projects">Projets</a>
         <a href="#testimonials">Témoignages</a>
         <a href="#contact">Contact</a>
-        <button
-          type="button"
-          onClick={handleDownload}
-          className="header__resume"
-        >
+        <button type="button" onClick={handleDownload} className="header__resume">
           Mon CV
         </button>
       </nav>
+
+      {/* Menu Burger */}
+      <button className="header__burger" onClick={menuOnClick}>
+        {menuOpen ? <FaTimes /> : <FaBars />} {/* Toggle burger icon */}
+      </button>
     </header>
   );
 }

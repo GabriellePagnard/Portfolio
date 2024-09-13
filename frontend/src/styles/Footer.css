@@ -9,3 +9,37 @@
     margin: 0;
   }
   
+/* -------- Responsive Styles pour Footer ---------- */
+
+  /* Petits écrans (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 20px 0; /* Ajuste le padding pour réduire l'espace sur les petits écrans */
+  }
+
+  .footer p {
+    font-size: 14px; /* Réduit légèrement la taille du texte */
+  }
+}
+
+/* Très petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0; /* Réduction supplémentaire du padding */
+  }
+
+  .footer p {
+    font-size: 13px; /* Ajuste encore la taille du texte */
+  }
+}
+
+/* Écrans très étroits (max-width: 576px) */
+@media (max-width: 576px) {
+  .footer {
+    padding: 10px 0; /* Réduit encore le padding pour les très petits écrans */
+  }
+
+  .footer p {
+    font-size: 12px; /* Réduction supplémentaire de la taille de la police */
+  }
+}

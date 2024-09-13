@@ -198,3 +198,122 @@
   right: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
+
+
+/* -------- Responsive Styles pour About ---------- */
+
+/* Petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 20px; /* Réduction du padding pour petits écrans */
+  }
+
+  .about__cadre {
+    max-width: 90%; /* Réduire la largeur maximale du cadre */
+    margin: 0 auto; /* Centrer le cadre horizontalement */
+  }
+
+  .about__title {
+    font-size: 2.4rem; /* Réduire la taille du titre */
+    margin-bottom: 30px;
+  }
+
+  .about__img {
+    width: 150px; /* Réduire la taille de l'image */
+    height: 150px;
+  }
+
+  .about__animation {
+    width: 180px; /* Réduire l'animation autour de l'image */
+    height: 180px;
+  }
+
+  .about__animation::before {
+    width: 210px;
+    height: 210px;
+  }
+
+  .about__text {
+    font-size: 1rem; /* Réduire la taille du texte */
+    margin-bottom: 15px;
+  }
+
+  .about__button {
+    padding: 0.4rem 1rem; /* Réduire la taille du bouton */
+    font-size: 0.8rem;
+  }
+
+  .about__tech-title {
+    font-size: 1.6rem; /* Réduire la taille du sous-titre des technologies */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .about__tech-icon {
+    font-size: 2rem; /* Réduire la taille des icônes */
+    width: 60px;
+    height: 60px;
+  }
+
+  .about__tech-icon-wrapper {
+    margin-right: 30px; /* Réduire l'espacement entre les icônes */
+  }
+}
+
+/* Très petits écrans (max-width: 576px) */
+@media (max-width: 576px) {
+  .about {
+    padding: 30px 10px; /* Réduire davantage le padding */
+  }
+
+  .about__cadre {
+    max-width: 100%; /* Utiliser toute la largeur disponible */
+    margin: 0 auto;
+  }
+
+  .about__title {
+    font-size: 2rem; /* Réduire davantage la taille du titre */
+    margin-bottom: 20px;
+  }
+
+  .about__img {
+    width: 120px; /* Réduire davantage la taille de l'image */
+    height: 120px;
+  }
+
+  .about__animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about__animation::before {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about__text {
+    font-size: 0.9rem; /* Réduire encore la taille du texte */
+    margin-bottom: 10px;
+  }
+
+  .about__button {
+    padding: 0.3rem 0.8rem; /* Réduire la taille du bouton */
+    font-size: 0.7rem;
+  }
+
+  .about__tech-title {
+    font-size: 1.4rem; /* Réduire davantage la taille du sous-titre des technologies */
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about__tech-icon {
+    font-size: 1.8rem; /* Réduire davantage la taille des icônes */
+    width: 50px;
+    height: 50px;
+  }
+
+  .about__tech-icon-wrapper {
+    margin-right: 20px; /* Réduire davantage l'espacement entre les icônes */
+  }
+}

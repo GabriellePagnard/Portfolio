@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Utilisation de la police Montserrat */
+/* Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .header {
   display: flex;
-  justify-content: center; 
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.2); 
+  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100%;
   top: 0;
@@ -13,24 +14,29 @@
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 .header__left {
   line-height: 0;
+  flex-shrink: 0;
 }
 
-.header__title {
-  font-size: 2rem; 
-  color: #ffffff;
-  margin-right: 2rem;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none; 
-  cursor: pointer; 
+.header__logo-link {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.header__logo {
+  display: block;
+  max-height: 60px;
+  width: auto;
 }
 
 .header__link {
   display: flex;
-  justify-content: center; 
+  justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
 }
@@ -39,10 +45,8 @@
   color: #ffffff;
   text-decoration: none;
   margin-right: 1.5rem;
-  font-weight: bold; 
-  text-transform: none;
+  font-weight: bold;
   font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
   transition: color 0.3s ease-in-out;
 }
 
@@ -50,54 +54,160 @@
   color: #24f9f2;
 }
 
-.header__link .header__resume {
+.header__resume {
   background-color: #40fde7;
   color: #c7008c;
   border: 1px solid #00414e;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  font-weight: bold; 
-  text-transform: uppercase; 
+  font-weight: bold;
+  text-transform: uppercase;
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.header__link .header__resume:hover {
+.header__resume:hover {
   background-color: #c7008c;
   color: #40fde7;
   border: 1px solid #710055;
   transform: scale(1.05);
 }
 
-.header__hidden {
-  transform: translateY(-100%); 
-}
-
-.active {
-  display: block;
-}
-
-.navbar-dark .navbar-nav .nav-link {
+/* Menu burger */
+.header__burger {
+  display: none;
+  background: none;
+  border: none;
   color: #fff;
-  font-size: 1.2rem;
-  padding: 0.75rem 1.5rem;
-  transition: color 0.3s;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #24f9f2;
+/* Menu actif */
+.header__link.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 0;
+  z-index: 999;
 }
 
-.header__logo-link {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  line-height: 0; /* Pour éviter les espaces en ligne */
+.header__link.active a {
+  margin-right: 0;
+  margin-bottom: 1rem;
 }
 
-.header__logo {
-  display: block;
-  max-height: 60px; /* Ajuste la taille du logo selon tes besoins */
-  margin: 0;
-  padding: 0;
+.header__link.active button {
+  margin-top: 1rem;
+}
+
+/* Masquage du header lors du scroll */
+.header__hidden {
+  transform: translateY(-100%);
+}
+
+/* --------- Responsive Styles pour Header ----------- */
+
+/* Petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Centrer le burger menu */
+  .header__burger {
+    display: block;
+    font-size: 2rem;
+    margin: 0 auto; /* Centrer horizontalement */
+    z-index: 1001;
+  }
+
+  .header__logo {
+    max-height: 50px;
+    left: 1rem;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  /* Masquer les liens de navigation */
+  .header__link {
+    display: none;
+  }
+
+  /* Styles du menu déroulant */
+  .header__link.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 60px;
+    left: 50%; /* Positionné au centre horizontalement */
+    transform: translateX(-50%); /* Assure un centrage parfait horizontalement */
+    width: 90%; /* Réduire la largeur du menu */
+    max-width: 300px; /* Limiter la largeur totale du menu */
+    padding: 20px 0;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .header__link.active a {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .header__resume {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Très petits écrans (max-width: 576px) */
+@media (max-width: 576px) {
+  .header {
+    padding: 0.4rem 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .header__burger {
+    font-size: 1.8rem;
+    margin: 0 auto; /* Toujours centré horizontalement */
+  }
+
+  .header__link.active {
+    width: 95%; /* Plus large sur très petits écrans */
+    left: 50%;
+    transform: translateX(-50%); /* Centré horizontalement */
+    max-width: 300px; /* Limiter la largeur totale du menu */
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .header__logo {
+    max-height: 35px;
+    left: 1rem;
+  }
+
+  .header__link.active a {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .header__resume {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }

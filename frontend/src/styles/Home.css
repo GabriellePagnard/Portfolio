@@ -111,3 +111,93 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* -------- Responsive Styles pour Home ---------- */
+
+
+/* Petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 8rem;
+    justify-content: center; /* Centrer verticalement le contenu */
+    align-items: center; /* Centrer horizontalement le contenu */
+  }
+
+  .home h1 {
+    font-size: 3rem; /* Réduire la taille du titre */
+    margin-top: 3rem;
+    text-align: center; /* Centrer le texte */
+    width: 100%; /* Assurer que le titre prend toute la largeur */
+  }
+
+  .home h3 {
+    font-size: 1.5rem; /* Réduire la taille du sous-titre */
+    margin-bottom: 5rem;
+    text-align: center; /* Centrer le texte */
+    width: 100%; /* Assurer que le sous-titre prend toute la largeur */
+  }
+
+  .home .btn-primary {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    margin: 0 auto; /* Centrer le bouton */
+    display: inline-block; /* Assurer qu'il n'occupe pas toute la largeur */
+  }
+
+  .social-icons {
+    bottom: 1.5rem; /* Ajuster le placement des icônes sociales */
+    left: 50%;
+    transform: translateX(-50%); /* Centrer les icônes horizontalement */
+    display: flex;
+    justify-content: center; /* Centrer les icônes horizontalement */
+  }
+
+  .social-icon {
+    width: 40px; /* Réduire la taille des icônes sociales */
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Très petits écrans (max-width: 576px) */
+@media (max-width: 576px) {
+  .home {
+    padding-top: 6rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home .btn-primary {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    margin: 0 auto; /* Centrer le bouton */
+    display: inline-block;
+  }
+
+  .social-icons {
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
