@@ -1,5 +1,210 @@
-.projects-section {
-    padding: 20px;
-    background-color: #eaeaea;
+.projects {
+  min-height: 80vh;
+  width: 100%;
+  padding: 60px 0;
+  background-color: #c7008b10;
+  font-family: 'Montserrat', sans-serif;
+  color: #606060;
+  display: flex;
+  justify-content: center;
+}
+
+.projects__container {
+  max-width: 80%;
+  position: relative;
+  width: 100%;
+}
+
+.projects__title {
+  font-size: 2.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #c7008c;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+  transition: height 0.3s ease;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects__card {
+  background-color: #f1f1f1;
+  border: 2px solid #c7008c;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease, height 0.3s ease;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects__card:hover {
+  transform: scale(1.05);
+  height: auto;
+  padding-bottom: 20px;
+}
+
+/* Masquer les détails tant que la carte n'est pas survolée */
+.projects__full-details {
+  display: none;
+  font-size: 0.9rem;
+  color: #606060;
+  margin-top: 10px;
+}
+
+/* Afficher les détails lorsque la carte est survolée */
+.projects__card:hover .projects__full-details {
+  display: block;
+}
+
+/* Flèche visible avant le dépliage */
+.projects__expand-icon {
+  font-size: 1.5rem;
+  color: #40fde7;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+/* Flèche visible avant le dépliage */
+.projects__expand-icon {
+  font-size: 1.5rem;
+  color: #40fde7;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+  display: block;
+
+  /* Centrer horizontalement et verticalement la flèche */
+  position: absolute;
+  left: 50%;
+  top: 87%;
+  transform: translate(-50%, -50%); /* Pour centrer à la fois horizontalement et verticalement */
+}
+
+/* Masquer la flèche lorsqu'on survole la carte */
+.projects__card:hover .projects__expand-icon {
+  opacity: 0; /* La flèche disparaît quand la carte est dépliée */
+}
+
+.projects__content-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #606060;
+  margin-bottom: 0.5rem;
+}
+
+.projects__description {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #606060;
+  margin-bottom: 10px;
+}
+
+.projects__date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem; 
+  font-weight: 600;
+  color: #c7008c;
+}
+
+.projects__icon {
+  color: #40fde7;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.projects__button {
+  margin-top: 3.2rem;
+  padding: 0.8rem 2rem;
+  background-color: #40fde7;
+  color: #c7008c;
+  border: 1px solid #00414e;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.projects__button:hover {
+  background-color: #c7008c;
+  color: #40fde7;
+  transform: scale(1.05);
+}
+
+.projects__button:disabled {
+  background-color: #d3d3d3;
+  color: #606060;
+  cursor: not-allowed;
+}
+
+/* Styles personnalisés pour les flèches */
+.custom-arrow {
+  font-size: 2rem;
+  color: #c7008c;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.custom-prev-arrow {
+  left: -70px;
+}
+
+.custom-next-arrow {
+  right: -70px;
+}
+
+.custom-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  background-color: #c7008c;
+  color: #40fde7;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+  .projects__row {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .projects__card {
+    margin-bottom: 30px;
+  }
+
+  .custom-prev-arrow {
+    left: -20px;
+  }
+
+  .custom-next-arrow {
+    right: -20px;
+  }
+}
