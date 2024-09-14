@@ -15,10 +15,8 @@ import './styles/styles.css';
 const App: React.FC = () => {
   return (
     <Router>
-      {/* Header and Footer are common to all routes */}
       <Header />
       <Routes>
-        {/* Route for Home page including all sections */}
         <Route
           path="/"
           element={
@@ -37,7 +35,7 @@ const App: React.FC = () => {
         <Route path="/projects" element={<ProjectsList />} />
 
         {/* Route for individual project details */}
-        <Route path="/project/:id" element={<ProjectDetails />} />
+        <Route path="/projects/:id" element={<ProjectDetails />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
-import backgroundImage from "../assets/images/bg.png";
+import backgroundImage from "../assets/images/bg.png"; 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home: React.FC = () => {

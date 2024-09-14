@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Projects.css";
-import { FaCalendarAlt, FaChevronLeft, FaChevronRight, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import {
+  FaCalendarAlt,
+  FaChevronLeft,
+  FaChevronRight,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa";
 import Slider from "react-slick";
 import projectsData from "../data/projectsData";
 import "slick-carousel/slick/slick.css";
@@ -94,12 +100,20 @@ const Projects: React.FC = () => {
                 </div>
                 <h4 className="projects__content-title">{project.name}</h4>
 
-                {/* Afficher l'image du projet */}
-                <img
-                  src={project.images[0]} // Première image du projet
-                  alt={project.name}
-                  className="projects__image"
-                />
+                {/* Afficher l'image du projet avec une vérification */}
+                {project.images && project.images.length > 0 ? (
+                  <img
+                    src={project.images[0]} // Première image du projet
+                    alt={project.name}
+                    className="projects__image"
+                  />
+                ) : (
+                  <img
+                    src="/assets/images/default-image.jpg" // Image par défaut si aucune image n'est présente
+                    alt="Image par défaut"
+                    className="projects__image"
+                  />
+                )}
 
                 {/* Flèche turquoise */}
                 <FaChevronDown className="projects__expand-icon" />
@@ -107,7 +121,10 @@ const Projects: React.FC = () => {
                 {/* Afficher la description et le bouton lors du survol */}
                 <div className="projects__details">
                   <p>{project.description}</p>
-                  <Link to={`/projects/${project.id}`} className="projects__button">
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="projects__button"
+                  >
                     Découvrir
                   </Link>
                 </div>
@@ -117,7 +134,10 @@ const Projects: React.FC = () => {
         </Slider>
 
         {/* Flèche de retour en haut */}
-        <div className={`back-to-top ${showArrow ? "visible" : ""}`} onClick={scrollToTop}>
+        <div
+          className={`back-to-top ${showArrow ? "visible" : ""}`}
+          onClick={scrollToTop}
+        >
           <FaChevronUp />
         </div>
       </div>

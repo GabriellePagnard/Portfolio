@@ -1,57 +1,132 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/ProjectDetails.css';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import des icônes
+import "bootstrap/dist/css/bootstrap.min.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../styles/ProjectDetails.css";
+import projectsData from "../data/projectsData";
 
-// Supposons que tu utilises un fichier `projectsData.ts` pour stocker les projets
-import projectsData from '../data/projectsData';
+// Flèches de navigation personnalisées
+const PrevArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow custom-prev-arrow" onClick={onClick}>
+      <FaChevronLeft />
+    </div>
+  );
+};
+
+const NextArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow custom-next-arrow" onClick={onClick}>
+      <FaChevronRight />
+    </div>
+  );
+};
 
 const ProjectDetails: React.FC = () => {
-  const { projectId } = useParams<{ projectId: string }>();
-  const project = projectsData.find((p) => p.id === parseInt(projectId || '', 10));
+  const { id } = useParams<{ id: string }>();
+  const project = projectsData.find((p) => p.id === parseInt(id || "", 10));
 
   if (!project) {
     return <div className="text-center my-5">Projet non trouvé</div>;
   }
 
-  return (
-    <div className="container project-details">
-      <h2 className="project-title text-center my-5">{project.name}</h2>
-      
-      <div className="row">
-        <div className="col-md-6">
-          <div className="project-description">
-            <h5>Description</h5>
-            <p>{project.description}</p>
-          </div>
-          <div className="project-details-section">
-            <h5>Détails du projet</h5>
-            <p>{project.fullDescription}</p>
-          </div>
-          {project.demoLink && (
-            <a href={project.demoLink} className="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer">
-              Voir la démo
-            </a>
-          )}
-          {project.repoLink && (
-            <a href={project.repoLink} className="btn btn-outline-dark mt-3 ms-2" target="_blank" rel="noopener noreferrer">
-              Voir le code source
-            </a>
-          )}
-        </div>
+  const settings = {
+    dots: false, // Suppression des points
+    infinite: true, // Carrousel infini
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    nextArrow: <NextArrow />, // Utilisation des flèches personnalisées
+    prevArrow: <PrevArrow />,
+  };
 
-        <div className="col-md-6 project-images">
-          <h5 className="text-center">Images du projet</h5>
-          <div className="d-flex flex-wrap justify-content-center">
-            {project.images && project.images.length > 0 ? (
-              project.images.map((image, index) => (
-                <img key={index} src={image} alt={`${project.name} screenshot ${index + 1}`} className="img-thumbnail m-2" />
-              ))
-            ) : (
-              <p>Aucune image disponible.</p>
-            )}
-          </div>
+  return (
+    <div className="project-details">
+      {/* Section d'en-tête pleine page avec texte centré et effet de flou */}
+      <div
+        className="project-header"
+        style={{
+          backgroundImage: `url(${project.images[0]})`,
+        }}
+      >
+        <div className="project-header-overlay">
+          <h1 className="project-header-title">{project.name}</h1>
         </div>
+      </div>
+
+      {/* Carrousel des images du projet */}
+      <div className="container my-5">
+        <h2 className="h2-title text-center mb-4">Images du projet</h2>
+        <div className="carousel-wrapper">
+          <Slider {...settings}>
+            {project.images.map((image, index) => (
+              <div key={index} className="carousel-image">
+                <img
+                  src={image}
+                  alt={`Project screenshot ${index + 1}`}
+                  className="img-fluid rounded"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+
+      {/* Boutons de démonstration et code source */}
+      <div className="container text-center my-4">
+        {project.demoLink && (
+          <a
+            href={project.demoLink}
+            className="btn btn-demo custom-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir la démo live
+          </a>
+        )}
+        {project.repoLink && (
+          <a
+            href={project.repoLink}
+            className="btn btn-code-source custom-btn ms-3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir le code source
+          </a>
+        )}
+      </div>
+
+      {/* Description complète du projet */}
+      <div className="container d-flex justify-content-center my-5">
+        <div className="project-description-card">
+          <h2 className="text-center mb-4">Détails du projet</h2>
+          <div
+            className="project-full-description content"
+            dangerouslySetInnerHTML={{ __html: project.fullDescription }}
+          />
+        </div>
+      </div>
+
+      {/* Vidéos du projet */}
+      <div className="container text-center my-5">
+        <h2 className="mb-4">Vidéos du projet</h2>
+        {project.videos.map((video, index) => (
+          <a
+            key={index}
+            href={video}
+            className="btn btn-video custom-btn ms-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir la vidéo {index + 1}
+          </a>
+        ))}
       </div>
     </div>
   );
