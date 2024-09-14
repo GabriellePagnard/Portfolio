@@ -56,12 +56,9 @@ function Header() {
         </Link>
       </div>
       <nav ref={navBarRef} className={`header__link ${menuOpen ? "active" : ""}`}>
-        <Link to="/" className="header__active">Accueil</Link>
-        <a href="#about">À propos</a>
-        <a href="#experience">Expériences & Formations</a>
-        <a href="#projects">Projets</a>
-        <a href="#testimonials">Témoignages</a>
-        <a href="#contact">Contact</a>
+      <Link to="/" className="header__active">Accueil</Link>
+        <Link to="/projectsList">Mes Projets</Link>
+        <Link to="/contact">Contact</Link>
         <button type="button" onClick={handleDownload} className="header__resume">
           Mon CV
         </button>

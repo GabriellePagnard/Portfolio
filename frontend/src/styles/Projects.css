@@ -248,6 +248,26 @@
   background-color: #c7008c;
 }
 
+/* Styles pour le bouton "Voir tous les projets" */
+.projects__button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #40fde7;
+  color: #c7008c;
+  border: 1px solid #00414e;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.projects__button:hover {
+  background-color: #c7008c;
+  color: #40fde7;
+  transform: scale(1.05);
+}
+
 
 /* -------- Responsive Styles pour Projets ---------- */
 

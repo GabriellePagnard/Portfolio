@@ -133,6 +133,13 @@ const Projects: React.FC = () => {
           ))}
         </Slider>
 
+        {/* Nouveau bouton "Voir tous les projets" */}
+        <div className="text-center my-4">
+          <Link to="/projectsList" className="projects__button">
+            Voir tous les projets
+          </Link>
+        </div>
+
         {/* Flèche de retour en haut */}
         <div
           className={`back-to-top ${showArrow ? "visible" : ""}`}

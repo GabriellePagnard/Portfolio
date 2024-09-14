@@ -1,9 +1,42 @@
-// types/Project.ts
-export interface Project {
-  id: number;
-  name: string;
-  description: string;
-  date: string;
-  isEncours: boolean;
-  imageUrl: string;
+.projects__card {
+  background-color: #f1f1f1;
+  border: 2px solid #c7008c;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%; /* S'assurer que toutes les cartes sont de hauteur égale */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects__card:hover {
+  transform: scale(1.05);
+}
+
+.projects__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.projects__button {
+  margin-top: 20px;
+  padding: 0.8rem 2rem;
+  background-color: #40fde7;
+  color: #c7008c;
+  border: 1px solid #00414e;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.projects__button:hover {
+  background-color: #c7008c;
+  color: #40fde7;
 }
