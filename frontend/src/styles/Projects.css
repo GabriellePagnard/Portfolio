@@ -40,7 +40,7 @@
   text-align: center;
   overflow: hidden;
   transition: transform 0.3s ease, background-color 0.3s ease, height 0.3s ease;
-  height: 225px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,6 +60,7 @@
   font-size: 0.9rem;
   color: #606060;
   margin-top: 10px;
+  margin-bottom: 5rem;
 }
 
 /* Afficher les détails lorsque la carte est survolée */
@@ -107,7 +108,8 @@
   font-size: 1.1rem;
   font-weight: 400;
   color: #606060;
-  margin-bottom: 10px;
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 .projects__date {
@@ -129,8 +131,30 @@
   margin-bottom: 15px;
 }
 
+.projects__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Masquer les détails tant que la carte n'est pas survolée */
+.projects__details {
+  display: none;
+  font-size: 0.9rem;
+  color: #606060;
+  margin-top: 10px;
+  margin-bottom: 5rem;
+}
+
+/* Afficher les détails lorsque la carte est survolée */
+.projects__card:hover .projects__details {
+  display: block;
+  margin-bottom: 5rem;
+}
+
 .projects__button {
-  margin-top: 3.2rem;
+  margin-top: 7rem;
   padding: 0.8rem 2rem;
   background-color: #40fde7;
   color: #c7008c;
@@ -366,4 +390,3 @@
     font-size: 0.8rem;
   }
 }
-

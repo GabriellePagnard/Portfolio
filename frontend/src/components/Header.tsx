@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // Utilisation de Link de React Router
 import "../styles/Header.css";
 import logo from "../assets/images/logo_gp.png";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import des icônes pour le menu burger
@@ -50,15 +51,13 @@ function Header() {
   return (
     <header ref={headerRef} className="header">
       <div className="header__left">
-        <a href="#home" className="header__logo-link">
+        <Link to="/" className="header__logo-link">
           <img src={logo} alt="Logo" className="header__logo" />
-        </a>
+        </Link>
       </div>
       <nav ref={navBarRef} className={`header__link ${menuOpen ? "active" : ""}`}>
-        <a href="#home" className="header__active">
-          Accueil
-        </a>
-        <a href="#about">A propos</a>
+        <Link to="/" className="header__active">Accueil</Link>
+        <a href="#about">À propos</a>
         <a href="#experience">Expériences & Formations</a>
         <a href="#projects">Projets</a>
         <a href="#testimonials">Témoignages</a>

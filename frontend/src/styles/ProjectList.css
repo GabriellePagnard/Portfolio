@@ -1,0 +1,9 @@
+// types/Project.ts
+export interface Project {
+  id: number;
+  name: string;
+  description: string;
+  date: string;
+  isEncours: boolean;
+  imageUrl: string;
+}
