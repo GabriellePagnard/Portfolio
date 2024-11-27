@@ -405,6 +405,52 @@ const projectsData = [
     demoLink: 'https://6747462259edc936b6afbb81--luminous-pasca-e5adf2.netlify.app/',
     repoLink: 'https://github.com/GabriellePagnard/FoodFlex_front/tree/main',
   },
+  {
+    id: 17,
+    name: 'Nom du projet',
+    description: 'Description courte du projet',
+    fullDescription: `
+      <p>Introduction courte</p>
+      <h3>🚀 Fonctionnalités Principales :</h3>
+      <p><strong> Fonctionnalité 1 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 2 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 3 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 4 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 5 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 6 :</strong> Blablabla</p>
+      <h3>Pourquoi choisir Projet ?</h3>
+      <p>Blablabla</p>
+    `,
+    date: "2024",
+    isEncours: true,
+    images: [],
+    videos: ['Lien Youtube 1', 'Lien youtube 2'],
+    demoLink: 'Lien vers la démo live',
+    repoLink: 'Lien vers le repo GitHub',
+  },
+  {
+    id: 18,
+    name: 'Nom du projet',
+    description: 'Description courte du projet',
+    fullDescription: `
+      <p>Introduction courte</p>
+      <h3>🚀 Fonctionnalités Principales :</h3>
+      <p><strong> Fonctionnalité 1 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 2 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 3 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 4 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 5 :</strong> Blablabla</p>
+      <p><strong> Fonctionnalité 6 :</strong> Blablabla</p>
+      <h3>Pourquoi choisir Projet ?</h3>
+      <p>Blablabla</p>
+    `,
+    date: "2024",
+    isEncours: true,
+    images: [],
+    videos: ['Lien youtube 1', 'Lien youtube 2'],
+    demoLink: 'Lien ver la démo live',
+    repoLink: 'Lien vers le repo GitHub',
+  },
 ];
   
 export default projectsData;
