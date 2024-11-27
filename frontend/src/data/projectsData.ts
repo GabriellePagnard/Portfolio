@@ -39,6 +39,23 @@ import img14_3 from '../assets/images/images_projets/id14-img3.jpg';
 import img15_1 from '../assets/images/images_projets/id15-img1.jpg';
 import img15_2 from '../assets/images/images_projets/id15-img2.jpg';
 import img15_3 from '../assets/images/images_projets/id15-img3.jpg';
+import img16_1 from '../assets/images/images_projets/id16-img1.jpg';
+import img16_2 from '../assets/images/images_projets/id16-img2.jpg';
+import img16_3 from '../assets/images/images_projets/id16-img3.jpg';
+import img16_4 from '../assets/images/images_projets/id16-img4.jpg';
+import img16_5 from '../assets/images/images_projets/id16-img5.jpg';
+import img16_6 from '../assets/images/images_projets/id16-img6.jpg';
+import img16_7 from '../assets/images/images_projets/id16-img7.jpg';
+import img16_8 from '../assets/images/images_projets/id16-img8.jpg';
+import img16_9 from '../assets/images/images_projets/id16-img9.jpg';
+import img16_10 from '../assets/images/images_projets/id16-img10.jpg';
+import img16_11 from '../assets/images/images_projets/id16-img11.jpg';
+import img16_12 from '../assets/images/images_projets/id16-img12.jpg';
+import img16_13 from '../assets/images/images_projets/id16-img13.jpg';
+import img16_14 from '../assets/images/images_projets/id16-img14.jpg';
+import img16_15 from '../assets/images/images_projets/id16-img15.jpg';
+import img16_16 from '../assets/images/images_projets/id16-img16.jpg';
+
 
 
 const projectsData = [
@@ -367,16 +384,26 @@ const projectsData = [
   },
   {
     id: 16,
-    name: 'Projet 16',
-    description: 'Description courte du projet 16.',
+    name: 'Foodflex',
+    description: 'Foodflex est une application innovante qui permet de planifier des menus hebdomadaires facilement tout en tenant compte des préférences alimentaires.',
     fullDescription: `
-      <p>Description détaillée du projet 16.</p>
+      <p>🍽️ Bienvenue dans Foodflex, votre assistant personnel pour la planification des repas !</p>
+      <h3>🚀 Fonctionnalités Principales :</h3>
+      <p><strong>🗂️ Catalogue de 450 recettes :</strong> Explorez une vaste sélection de recettes avec des détails complets, notamment des images, des ingrédients et des instructions.</p>
+      <p><strong>🔍 Filtrage et recherche :</strong> Trouvez rapidement des recettes par nom, ingrédient ou catégorie grâce à un système de filtrage performant.</p>
+      <p><strong>💾 Gestion des favoris :</strong> Ajoutez vos recettes préférées à votre liste de favoris pour un accès rapide et facile.</p>
+      <p><strong>📅 Planification des repas :</strong> Organisez vos repas hebdomadaires en attribuant des recettes à des jours spécifiques.</p>
+      <p><strong>🎲 Génération aléatoire :</strong> Pour les utilisateurs pressés, générez un menu hebdomadaire en un seul clic.</p>
+      <p><strong>👤 Profil utilisateur :</strong> Accédez à un espace personnel pour gérer vos informations et votre liste de favoris.</p>
+      <h3>Pourquoi choisir Foodflex ?</h3>
+      <p>Foodflex simplifie votre vie en vous aidant à manger sainement, à planifier vos repas rapidement, et à découvrir de nouvelles idées culinaires. Que vous soyez novice en cuisine ou passionné de gastronomie, Foodflex est conçu pour vous offrir une expérience utilisateur agréable et interactive.</p>
     `,
     date: "2023",
     isEncours: true,
-    videos: ['https://www.youtube.com/embed/video1'],
-    demoLink: 'https://lien-demo1.com',
-    repoLink: 'https://github.com/repo1',
+    images: [img16_1, img16_2, img16_3, img16_4, img16_5, img16_6, img16_7, img16_8, img16_9, img16_10, img16_11, img16_12, img16_13, img16_14, img16_15, img16_16],
+    videos: ['https://www.youtube.com/watch?v=-4THldWYoGM', 'https://youtube.com/shorts/MRqO9002zDc?feature=share'],
+    demoLink: 'https://6747462259edc936b6afbb81--luminous-pasca-e5adf2.netlify.app/',
+    repoLink: 'https://github.com/GabriellePagnard/FoodFlex_front/tree/main',
   },
 ];
   
